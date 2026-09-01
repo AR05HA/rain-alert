@@ -5,13 +5,14 @@ import requests
 API_KEY = os.environ.get("OWM_API_KEY")
 my_email = os.environ.get("MY_EMAIL")
 password = os.environ.get("MY_PASSWORD")
+to_email = os.environ.get("TO_EMAIL")
 
-MY_LAT = 7.317704
-MY_LNG = 80.276411
+my_lat = os.environ.get("MY_LAT") 
+my_lng = os.environ.get("MY_LNG") 
 
 parameters = {
-    "lat": MY_LAT,
-    "lon": MY_LNG,
+    "lat": my_lat,
+    "lon": my_lng,
     "appid": API_KEY,
     "cnt": 4,
 }
@@ -35,6 +36,6 @@ if will_rain:
     connection.login(user=my_email, password=password)
     connection.sendmail(
         from_addr=my_email,
-        to_addrs="aroshachamik@gmail.com",
-        msg="Subject:It's Raining!!\n\n Bring an Umbrella",
+        to_addrs=to_email,
+        msg="Subject:🌧️ Rain Alert: Grab an Umbrella!\n\nRain is expected in your area. Don't forget your umbrella before heading out!"
     )
