@@ -36,5 +36,5 @@ if will_rain:
     connection.sendmail(
         from_addr=my_email,
         to_addrs="aroshachamik@gmail.com",
-        msg="Subject:It's Raining Babe!!\n\n Bring an Umbrella",
+        msg="Subject:It's Raining!!\n\n Bring an Umbrella",
     )
