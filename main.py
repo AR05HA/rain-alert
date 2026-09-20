@@ -37,5 +37,5 @@ if will_rain:
     connection.sendmail(
         from_addr=my_email,
         to_addrs=to_email,
-        msg="Subject:🌧️ Rain Alert: Grab an Umbrella!\n\nRain is expected in your area. Don't forget your umbrella before heading out!"
+        msg="Subject:🌧️ Rain Alert: Grab an Umbrella!\n\nRain is expected in your area. Don't forget your umbrella before heading out!".encode('utf-8')
     )
